@@ -53,6 +53,7 @@ div {
 }
 .img-center{
     max-width: 45%;
+    max-height: 45%;
     text-align: center;
     display: block;
     margin-left: auto;
