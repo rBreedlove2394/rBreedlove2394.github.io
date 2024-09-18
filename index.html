@@ -5,41 +5,100 @@
 		<meta charset="UTF-8">
 		<style>
 			body{
-				background-color: #8D918D;
-				color: black;
-				font-family: Tahoma;
+				background-image: url("video/unsc-flag.jpg");
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				height: 100vh;
+				color: white;
+				font-family: Tahoma, sans-serif;
 
 			}
 			header, main, footer{
 				width: 95%;
 				max-width: 1200px;
 				margin: 0 auto;
+				text-align: center;
+				overflow-wrap: normal;
+
+			}
+			div {
+				display: flex;
+				align-items: normal;
+				border: 1px solid black;
+				overflow-wrap: break-word;
+				margin: auto;
+				padding: 1rem;
+				height: auto;
+				width: auto;
+				max-width: 100%;
+				max-height: 100%;
+				background-color: #8D918D;
+				color: white;
+
+			}
+			video{
+				height: 25%;
+				width: 25%;
+			}
+			div footer{
+				display: flex;
+				border: 2rem solid black;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+			}
+			a footer{
+				display: flex;
+				align-items: center;
+				text-align: center;
+			}
+			video{
+				border-radius: 10%;
 			}
 		</style>
 
 		<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
+
 		<header>
 			<h1>Ryan Breedlove's Site</h1>
 		</header>
 		<main>
 			<h2>Have a look around!</h2>
-			<p>I will be adding more details later! Stay toon!</p>
-			<p>Bio:  I am 30, living in Belmont, NC. In my spare time I travel and play video games. I currently own a Yamaha
-			r7 sport bike, that I use to get around town. I have been working Security for the past 9 and a half years.
-				I'm a supervisor with Tailormade Protective Services. I have done IT work in the past as well.</p>
+			<div>
+
+				<video autoplay controls loop>
+					<source src="video/motoride.MP4">
+				</video>
+				<div>
+				<h3>Hello I am Ryan Breedlove and this is my Page!</h3>
+				<p>Bio:  I am 30, living in Belmont, NC. In my spare time I travel and play video games. I currently own a Yamaha
+					r7 sport bike, that I use to get around town. I have been working Security for the past 9 and a half years.
+					I'm a supervisor with Tailormade Protective Services. I have done IT work in the past as well.
+				</p>
+				</div>
+				<div>
+					<ul>My current video games being played!
+						<li>Warhammer 40k Space marine 2</li>
+						<li>Star Citizen</li>
+						<li>Elder Scrolls Online</li>
+					</ul>
+				</div>
+			</div>
 		</main>
 		<footer>
-			<p>Useful links will go here</p>
-			<nav>
-				<a href="itis3135/">My ITIS3135 Course Site</a>
-				||
-				<a href="https://github.com/rBreedlove2394">GitHub Account</a>
-				||
-				<a href="https://rBreedlove2394.github.io">GitHub Pages</a>
-				||
-			</nav>
+			<div>
+				<nav>
+					<a href="itis3135/">ITIS3135 Site</a>
+					||
+					<a href="https://github.com/rBreedlove2394">GitHub</a>
+					||
+					<a href="https://rBreedlove2394.github.io">GitHub.io</a>
+					||
+				</nav>
+			</div>
 		</footer>
 	</body>
 </html>

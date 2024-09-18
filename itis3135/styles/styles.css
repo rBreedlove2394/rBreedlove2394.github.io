@@ -36,7 +36,13 @@ h2{
 body{
     font-family: sans-serif, serif;
     background-color: #000000;
+    background-image: url("../images/background-image.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+    background-size: cover;
     color: #E0E0CE;
+    min-height:100vh;
 }
 div {
     text-align: center;
