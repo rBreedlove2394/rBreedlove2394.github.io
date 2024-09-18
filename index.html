@@ -10,7 +10,7 @@
 				background-position: center;
 				background-size: cover;
 				height: 100vh;
-				color: white;
+				color: #E0E0CE;
 				font-family: Tahoma, sans-serif;
 
 			}
@@ -25,21 +25,29 @@
 			div {
 				display: flex;
 				align-items: normal;
-				border: 1px solid black;
 				overflow-wrap: break-word;
 				margin: auto;
 				padding: 1rem;
-				height: auto;
-				width: auto;
 				max-width: 100%;
 				max-height: 100%;
-				background-color: #8D918D;
+				background-color: #065A82;
 				color: white;
+				flex-direction: column;
+				border-radius: 10%;
 
 			}
+			.video{
+				align-content: center;
+				align-items: center;
+				display: flex;
+				flex-direction: row;
+				object-position: center;
+				padding-left: 28vw;
+			}
 			video{
-				height: 25%;
-				width: 25%;
+				height: 35%;
+				width: 35%;
+				object-position: center;
 			}
 			div footer{
 				display: flex;
@@ -47,14 +55,25 @@
 				justify-content: center;
 				align-items: center;
 				text-align: center;
+				border-radius: 0;
 			}
 			a footer{
 				display: flex;
 				align-items: center;
 				text-align: center;
+
 			}
 			video{
 				border-radius: 10%;
+				align-items: center;
+				justify-content: center;
+				display: flex;
+			}
+			a:link{
+				color: #ad343e;
+			}
+			a:visited{
+				color:  #F2AF29;
 			}
 		</style>
 
@@ -68,16 +87,18 @@
 		<main>
 			<h2>Have a look around!</h2>
 			<div>
+				<div class="video">
+					<video autoplay controls loop>
+						<source src="video/motoride.MP4">
+					</video>
+				</div>
 
-				<video autoplay controls loop>
-					<source src="video/motoride.MP4">
-				</video>
 				<div>
-				<h3>Hello I am Ryan Breedlove and this is my Page!</h3>
-				<p>Bio:  I am 30, living in Belmont, NC. In my spare time I travel and play video games. I currently own a Yamaha
-					r7 sport bike, that I use to get around town. I have been working Security for the past 9 and a half years.
-					I'm a supervisor with Tailormade Protective Services. I have done IT work in the past as well.
-				</p>
+					<h3>Hello I am Ryan Breedlove and this is my Page!</h3>
+					<p>Bio:  I am 30, living in Belmont, NC. In my spare time I travel and play video games. I currently own a Yamaha
+						r7 sport bike, that I use to get around town. I have been working Security for the past 9 and a half years.
+						I'm a supervisor with Tailormade Protective Services. I have done IT work in the past as well.
+					</p>
 				</div>
 				<div>
 					<ul>My current video games being played!
