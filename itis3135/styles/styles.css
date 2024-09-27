@@ -71,8 +71,15 @@ figcaption {
     font-style: italic;
 }
 a:link{
+<<<<<<< Updated upstream
     color: #ad343e;
 }
 a:visited{
     color:  #F2AF29;
+=======
+    color: blueviolet;
+}
+a:visited{
+    color:  greenyellow;
+>>>>>>> Stashed changes
 }
