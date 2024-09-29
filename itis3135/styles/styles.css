@@ -36,13 +36,20 @@ h2{
 body{
     font-family: sans-serif, serif;
     background-color: #000000;
-    background-image: url("../images/background-image.png");
+    background-image: url("../images/dark-background.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: scroll;
     background-size: cover;
     color: #E0E0CE;
     min-height:100vh;
+}
+footer{
+    text-align: center;
+    text-wrap: nowrap;
+    overflow: hidden;
+    white-space: wrap;
+    padding-top: 2vh;
 }
 div {
     text-align: center;
@@ -71,15 +78,23 @@ figcaption {
     font-style: italic;
 }
 a:link{
-<<<<<<< Updated upstream
+
     color: #ad343e;
 }
 a:visited{
-    color:  #F2AF29;
-=======
     color: blueviolet;
 }
 a:visited{
     color:  greenyellow;
->>>>>>> Stashed changes
+}
+main > p {
+    text-align: center;
+}
+em{
+    text-align: center;
+    font-style: italic;
+    white-space: pre;
+    text-wrap: wrap;
+    padding-bottom: 2rem;
+    margin-bottom: auto;
 }
