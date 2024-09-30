@@ -79,14 +79,12 @@ figcaption {
 }
 a:link{
 
-    color: #ad343e;
+    color: #1BC20F;
 }
 a:visited{
-    color: blueviolet;
+    color: hotpink;
 }
-a:visited{
-    color:  #1BC20F;
-}
+
 main > p {
     text-align: center;
 }
