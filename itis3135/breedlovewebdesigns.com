@@ -48,7 +48,7 @@
       background-color: #488286;
     }
     a:link{
-      color: #ad343e;
+      color: orangered;
     }
     a:visited{
       color: greenyellow;
@@ -126,32 +126,9 @@
       </li>
     </ul>
   </div>
-
+  <footer>
+    <div data-include="components/footer.html"></div>
+  </footer>
+  <script src="scripts/HTMLInclude.min.js"></script>
 </body>
-<footer>
-  <nav>
-    <a href="webpages.charlotte.edu/rbreed1">Charlotte.edu</a>
-    ||
-    <a href="https://github.com/rBreedlove2394">GitHub Account</a>
-    ||
-    <a href="https://rBreedlove2394.github.io">GitHub.io</a>
-    ||
-    <a href="https://www.freecodecamp.org/rbreedlove1">freeCodeCamp</a>
-    ||
-    <a href="https://www.codecademy.com/profiles/rbreedlove1">Codecademy</a>
-    ||
-    <a href="https://www.linkedin.com/in/ryan-breedlove-208315245/">LinkedIn</a>
-  </nav>
-  <p>© 2024 Puellastar - Designed By<a href="https://webpages.charlotee.edu/rbeedl1/itis3135/breedlovewebdesigns.com">
-    Breedlove Web Designs
-  </a></p>
-  <em><span>Customized to your needs</span></em>
-  <br>
-  <br>
-  <a href="https://validator.w3.org/check?uro=referer" id="validation-link-html">
-    <img src="images/button_validation_html5.png" width="88" height="31" alt="Validate webpage Html"></a>
-  <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation-link-css">
-    <img src="images/button_validation_css.png" width="88" height="31" alt="Validate webpage Css">
-  </a>
-</footer>
 </html>
