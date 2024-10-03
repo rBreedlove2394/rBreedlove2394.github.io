@@ -1,7 +1,7 @@
 ul{
     list-style-type: circle;
     margin: 0;
-    padding: 10px;
+    padding-left: 10px;
     overflow: hidden;
 }
 
@@ -14,6 +14,9 @@ h1 {
     text-align: center;
     font-weight: bold;
     margin-bottom: 0;
+}
+h3{
+    padding-left: 10rem;
 }
 
 #home {
@@ -34,7 +37,7 @@ h2{
     padding: 50px;
 }
 body{
-    font-family: sans-serif, serif;
+    font-family: Papyrus, serif;
     background-color: #000000;
     background-image: url("../images/dark-background.jpg");
     background-repeat: no-repeat;
@@ -43,10 +46,10 @@ body{
     background-size: cover;
     color: #E0E0CE;
     min-height:100vh;
+    font-size: 20px;
 }
 footer{
     text-align: center;
-    text-wrap: normal;
     overflow: hidden;
     white-space: normal;
     padding-top: 2vh;
@@ -92,7 +95,19 @@ em{
     text-align: center;
     font-style: italic;
     white-space: pre;
-    text-wrap: normal;
     padding-bottom: 2rem;
     margin-bottom: auto;
+}
+section > p{
+    padding-left: 15rem;
+}
+section > ul{
+    padding-left: 15rem;
+}
+.course-list{
+    padding-left: 5rem;
+}
+figure{
+
+    margin-bottom: 2rem;
 }
