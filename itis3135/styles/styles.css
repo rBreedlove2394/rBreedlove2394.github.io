@@ -1,3 +1,7 @@
+@font-face {
+    font-family: oldSchool;
+    src: url("oldSchool.ttf");
+}
 ul{
     list-style-type: circle;
     margin: 0;
@@ -27,7 +31,8 @@ h3{
 nav{
     text-align: center;
     margin: auto;
-    padding: 0;
+    padding: 10px;
+    
 }
 
 h2{
@@ -37,7 +42,7 @@ h2{
     padding: 50px;
 }
 body{
-    font-family: Papyrus, serif;
+    font-family: oldSchool, serif;
     background-color: #000000;
     background-image: url("../images/dark-background.jpg");
     background-repeat: no-repeat;
