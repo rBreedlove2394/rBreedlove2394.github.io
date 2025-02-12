@@ -1,6 +1,6 @@
 @font-face {
-    font-family: oldSchool;
-    src: url("oldSchool.ttf");
+    font-family: Gaming;
+    src: url("../images/Moonhouse-yE5M.ttf");
 }
 ul{
     list-style-type: circle;
@@ -42,7 +42,7 @@ h2{
     padding: 50px;
 }
 body{
-    font-family: oldSchool, serif;
+    font-family: Gaming, serif;
     background-color: #000000;
     background-image: url("../images/dark-background.jpg");
     background-repeat: no-repeat;
