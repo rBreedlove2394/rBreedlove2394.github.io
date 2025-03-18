@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Motorcycle Riding</title>
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="icon" type="image/png" href="images/racing-motorcycle_1f3cd.png">
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      background-color: silver;
       color: #333;
       text-align: center;
     }
@@ -26,7 +26,6 @@
     }
     main section {
       display: none;
-      padding: 20px;
       background: #fff;
       margin: 20px auto;
       width: 80%;
@@ -37,9 +36,9 @@
       display: block;
     }
     figure img {
-      width: 100%;
+      width: 45%;
       max-width: 600px;
-      height: auto;
+      height: 45%;
       border-radius: 10px;
     }
     figcaption {
@@ -48,12 +47,13 @@
   </style>
   <script>
     function showSection(sectionId) {
-      document.querySelectorAll('main section').forEach(section => {
+      document.querySelectorAll('main section').forEach((section) => {
         section.style.display = 'none';
       });
       document.getElementById(sectionId).style.display = 'block';
     }
   </script>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <header>
@@ -61,80 +61,111 @@
   <nav>
     <a onclick="showSection('home')">Home</a>
     <a onclick="showSection('about')">About</a>
-    <a onclick="showSection('best_times')">Best Times</a>
-    <a onclick="showSection('best_locations')">Best Locations</a>
+    <a onclick="showSection('Seasons')">Seasons</a>
+    <a onclick="showSection('Tail-of-the-Dragon')">Tail of the Dragon</a>
     <a onclick="showSection('how')">How to Start</a>
-    <a onclick="showSection('why')">Why Photography?</a>
+    <a onclick="showSection('why')">Why Ride?</a>
     <a onclick="showSection('ai_prompts')">AI Prompts</a>
   </nav>
 </header>
 <main>
   <section id="home">
     <h2>Home</h2>
-    <p>Photography is the art of capturing light with a camera to create images. It can be a creative outlet and a way to document life.</p>
+    <p>Welcome to the start of your motorcycle journey!</p>
     <figure>
-      <img src="images/camera.jpg" alt="A professional camera">
-      <figcaption>A DSLR camera capturing a beautiful sunset.</figcaption>
+      <img src="images/moto-selfie.jpg" alt="moto-selfie" />
+      <figcaption>Me on my bike</figcaption>
     </figure>
   </section>
 
   <section id="about">
     <h2>About</h2>
-    <p>I started photography five years ago, and it has become my passion. Capturing moments and telling stories through images is what I love.</p>
+    <p>Have you ever wanted to experience your drive? Riding a motorcycle is like cutting through the landscape, where you get to feel, smell, and experience everything around you!</p>
     <figure>
-      <img src="images/selfie.jpg" alt="Photographer">
-      <figcaption>Me on a photography trip.</figcaption>
+      <img src="images/myR7.png" alt="Motorcycle rider">
+      <figcaption>Me on a motorcycle road trip.</figcaption>
+    </figure>
+
+    <h3>Types of Motorcycles</h3>
+    <div>
+      <h4>Sport Bikes</h4>
+      <p>Sport bikes are built for speed and agility, featuring aerodynamic designs and powerful engines.</p>
+      <figure>
+        <img src="images/sportBike.jpg" alt="Sport bike">
+        <figcaption>A sleek and fast sport bike.</figcaption>
+      </figure>
+    </div>
+    <div>
+      <h4>Cruisers</h4>
+      <p>Cruisers are designed for comfort and style, often featuring a relaxed riding position and a classic look.</p>
+      <figure>
+        <img src="images/cruiser.jpg" alt="Cruiser motorcycle">
+        <figcaption>A stylish cruiser built for long rides.</figcaption>
+      </figure>
+    </div>
+  <div>
+      <h4>Adventure Bikes</h4>
+      <p>Adventure bikes are versatile machines capable of handling both on-road and off-road adventures.</p>
+      <figure>
+        <img src="images/advBike.jpg" alt="Adventure motorcycle">
+        <figcaption>Exploring rough terrains with an adventure bike.</figcaption>
+      </figure>
+    </div>
+    <div>
+      <h4>Touring Bikes</h4>
+      <p>Touring motorcycles are built for long-distance rides, offering comfort, storage, and advanced technology.</p>
+      <figure>
+        <img src="images/touringBike.jpg" alt="Touring motorcycle">
+        <figcaption>A luxury touring bike for cross-country trips.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="Seasons">
+    <h2>Riding Season</h2>
+    <p>Riding a motorcycle can be year round, depending on if you're willing to brave the colder months.
+      Riding season is the peak time of year. Riding season starts in the spring and goes all summer long and ends in the fall months.</p>
+    <figure>
+      <img src="images/SpringRide.jpg" alt="Golden hour scenery">
+      <figcaption>Motorcycle in the spring on a mountain road</figcaption>
     </figure>
   </section>
 
-  <section id="best_times">
-    <h2>Best Times</h2>
-    <p>The golden hour, just after sunrise and before sunset, provides the best natural lighting for photography.</p>
+  <section id="Tail-of-the-Dragon">
+    <h2>Tail of the Dragon</h2>
+    <p>The <a href="https://tailofthedragon.com">Tail of the Dragon</a> is the number one road for cars and motorcycles in the USA. It opened in 1975 and has been opened every year since.
+    The tail has 318 curves in just 11 miles. The road is US 129, which boarders the Great Smoky Mountains and the Cherokee National Forest.</p>
     <figure>
-      <img src="images/golden_hour.jpg" alt="Golden hour scenery">
-      <figcaption>The golden hour enhances natural light.</figcaption>
-    </figure>
-  </section>
-
-  <section id="best_locations">
-    <h2>Best Locations</h2>
-    <p>Nature, urban landscapes, and cultural sites are excellent places for photography.</p>
-    <figure>
-      <img src="images/mountain_view.jpg" alt="Mountain landscape">
-      <figcaption>A stunning view captured from a mountain peak.</figcaption>
+      <img src="images/tail-dragon-fall.jpg" alt="Motorcycle On the Dragon">
+      <figcaption>A thrilling ride through mountain roads.</figcaption>
     </figure>
   </section>
 
   <section id="how">
     <h2>How to Start</h2>
-    <p>Begin with a smartphone camera, learn the basics of lighting and composition, and gradually invest in better equipment.</p>
-    <figure>
-      <img src="images/learning.jpg" alt="Learning photography">
-      <figcaption>Learning photography step by step.</figcaption>
-    </figure>
+    <p>Start with a beginner-friendly bike, take the Motorcycle Safety Course, and buy protective gear for while you ride.</p>
+    <div>
+      <h3><a href="https://msf-usa.org">Motorcycle Safety Foundation</a></h3>
+      <p>The Motorcycle Safety Foundation has various classes to help new riders learn the basics and fundamentals of learning how to ride a motorcycle.
+        You can start with the basic riders course. This course will help every new rider get the skills and confidence needed to ride a motorcycle.</p>
+    </div>
   </section>
 
   <section id="why">
-    <h2>Why Photography?</h2>
-    <p>Photography allows for creative expression, preserves memories, and can even become a career.</p>
-    <figure>
-      <img src="images/memories.jpg" alt="Captured memories">
-      <figcaption>Every photo tells a story.</figcaption>
-    </figure>
+    <h2>Why Ride?</h2>
+    <p>Riding a motorcycle is not just about transportation; it's about experiencing the world in its purest form. It's the rush of wind against your skin, the rhythmic hum of the engine beneath you, and the unfiltered connection to the road ahead. Every twist of the throttle ignites a sense of freedom, an escape from the mundane, and an embrace of adventure. The open road becomes your canvas, painted with sunsets, winding mountain passes, and the thrill of the unknown. To ride is to feel alive, to chase the horizon with an unbreakable spirit, and to discover the soul of every journey.</p>
   </section>
 
   <section id="ai_prompts">
     <h2>AI Prompts</h2>
-    <p>These are the prompts I used to generate AI images for my photography website:</p>
+    <p>These are the prompts I used to generate the skeleton for my motorcycle riding website:</p>
     <ul>
-      <li>"A DSLR camera capturing a sunset in a scenic landscape."</li>
-      <li>"A person with a camera taking a photo of nature."</li>
-      <li>"Golden hour lighting over a quiet lake with reflections."</li>
-      <li>"A breathtaking mountain view captured at dawn."</li>
-      <li>"A beginner learning photography with a simple camera setup."</li>
-      <li>"A collection of memories captured in photographs."</li>
+      <li>I used AI to generate the skeleton for the HTML </li>
+      <li>I used AI to generate the skeleton for the CSS</li>
+      <li>I used AI to generate the skeleton for the JavaScript</li>
     </ul>
   </section>
 </main>
 </body>
 </html>
+
