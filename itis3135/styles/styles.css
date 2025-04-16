@@ -140,3 +140,6 @@ tfoot th {
     background-color: transparent;
     text-align: right;
 }
+form {
+    padding: 1.5rem;
+}
