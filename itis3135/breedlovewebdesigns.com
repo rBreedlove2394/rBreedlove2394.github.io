@@ -15,6 +15,10 @@
       padding-left: 45vw;
 
     }
+    img {
+      width: 50px;
+      height: 50px;
+    }
     header{
       text-align: center;
       background-color: #488286;
@@ -57,7 +61,7 @@
 </head>
 <body>
   <header>
-    <img src="images/computer.png" alt="logo" width="50px" height="50px">
+    <img src="images/computer.png" alt="logo">
     <h1>Breedlove Web Designs</h1>
   </header>
   <h2>Web Design Services</h2>
