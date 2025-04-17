@@ -3,20 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Legion Security Solutions</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Home - Vanguard Security Solutions</title>
+  <link rel="stylesheet" href="styles/styles.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="scripts/main.js" defer></script>
 </head>
 <body>
 <header>
-  <div data-include="components/header.html"></div>
+  <div include-html="components/header.html"></div>
 </header>
 
 <main>
   <section id="hero">
-    <h1>Legion Security Solutions</h1>
-    <p>Your trusted partner in all your security needs</p>
+    <h1>Vanguard Security Solutions</h1>
+    <figure>
+      <img src="images/security-banner.png" alt="Vanguard Security guarding a business" style="display: block; margin: 0 auto; max-width: 100%; border-radius: 6px;">
+      <figcaption>Your trusted partner in all your security needs</figcaption>
+    </figure>
+
   </section>
 
   <section id="about">
@@ -51,8 +55,17 @@
 </main>
 
 <footer>
-  <div data-include="components/footer.html"></div>
+  <div include-html="components/footer.html"></div>
 </footer>
-<script src="scripts/HTMLInclude.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const includes = document.querySelectorAll('[include-html]');
+    includes.forEach(el => {
+      fetch(el.getAttribute('include-html'))
+              .then(res => res.text())
+              .then(data => el.innerHTML = data);
+    });
+  });
+</script>
 </body>
 </html>

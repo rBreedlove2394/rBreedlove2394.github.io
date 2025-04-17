@@ -2,9 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - Vanguard Security Solutions</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/main.js" defer></script>
 </head>
 <body>
+<header>
+    <div include-html="components/header.html"></div>
+</header>
 
+<main>
+    <section id="careers">
+        <h1>Careers at Vanguard Security Solutions</h1>
+        <p>Join our mission to protect and serve the Belmont community with professionalism and pride.</p>
+
+        <h2>Company Culture</h2>
+        <p>We value integrity, responsibility, and community engagement. Our team members work together to build safer neighborhoods and trusted partnerships.</p>
+
+        <h2>Current Openings</h2>
+        <ul>
+            <li><strong>Security Officer (Full-Time)</strong><br>Ensure client safety, monitor premises, and report incidents. Requires NC Security License.</li>
+            <li><strong>Security Systems Installer</strong><br>Install and maintain alarm and access systems. Tech experience preferred.</li>
+            <li><strong>Dispatcher / Monitoring Agent</strong><br>Coordinate response and monitor systems from HQ. Weekend shifts available.</li>
+        </ul>
+
+        <h2>Apply Now</h2>
+        <form id="applicationForm" enctype="multipart/form-data">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="position">Position Applied For:</label>
+            <select id="position" name="position">
+                <option>Security Officer</option>
+                <option>Security Systems Installer</option>
+                <option>Dispatcher / Monitoring Agent</option>
+            </select>
+
+            <label for="resume">Upload Resume (PDF or DOC):</label>
+            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+
+            <button type="submit">Submit Application</button>
+            <p id="appResponse" style="margin-top:10px;"></p>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <div include-html="components/footer.html"></div>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const includes = document.querySelectorAll('[include-html]');
+        includes.forEach(el => {
+            fetch(el.getAttribute('include-html'))
+                .then(res => res.text())
+                .then(data => el.innerHTML = data);
+        });
+
+        const appForm = document.getElementById("applicationForm");
+        appForm.addEventListener("submit", function(e) {
+            e.preventDefault();
+            const name = document.getElementById("fullname").value;
+            document.getElementById("appResponse").textContent = `Thanks, ${name}! Your application has been received.`;
+            appForm.reset();
+        });
+    });
+</script>
 </body>
 </html>

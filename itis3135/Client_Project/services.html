@@ -2,9 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Vanguard Security Solutions</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/main.js" defer></script>
 </head>
 <body>
+<header>
+    <div include-html="components/header.html"></div>
+</header>
 
+<main>
+    <section id="services">
+        <h1>Our Security Services</h1>
+        <p>At Vanguard Security Solutions, we offer a wide range of customizable security services tailored to protect what matters most to you.</p>
+
+        <div class="service-list">
+            <article class="service">
+                <img src="images/access-control.png" alt="Access Control System" style="width:100%; border-radius: 4px;">
+                <h2>Residential Security</h2>
+                <p>Protect your home and loved ones with professional surveillance, alarm systems, and patrol services tailored to your neighborhood.</p>
+            </article>
+
+            <article class="service">
+                <img src="images/access-control.png" alt="Access Control System" style="width:100%; border-radius: 4px;">
+                <h2>Commercial Security</h2>
+                <p>From retail stores to office complexes, our commercial services ensure employee safety and asset protection with 24/7 monitoring.</p>
+            </article>
+
+            <article class="service">
+                <img src="images/access-control.png" alt="Access Control System" style="width:100%; border-radius: 4px;">
+                <h2>Alarm Systems</h2>
+                <p>We install and maintain modern alarm systems with remote access, motion sensors, and emergency alert integrations.</p>
+            </article>
+
+            <article class="service">
+                <img src="images/access-control.png" alt="Access Control System" style="width:100%; border-radius: 4px;">
+                <h2>Access Control</h2>
+                <p>Regulate entry with advanced access systems including keypads, card readers, biometric scanners, and intercom integration.</p>
+            </article>
+
+            <article class="service">
+                <img src="images/access-control.png" alt="Access Control System" style="width:100%; border-radius: 4px;">
+                <h2>Security Consulting</h2>
+                <p>Our experts assess risks and recommend complete security solutions for residential, commercial, and institutional clients.</p>
+            </article>
+        </div>
+
+        <section class="pricing">
+            <h2>General Pricing Overview</h2>
+            <ul>
+                <li>Residential Packages: Starting at $49.99/month</li>
+                <li>Commercial Services: Custom pricing based on square footage and needs</li>
+                <li>Alarm Installations: One-time setup from $199.99</li>
+                <li>Access Control: Starting at $399 per entry point</li>
+            </ul>
+            <p><a href="contact.html" class="button">Get a Custom Quote</a></p>
+        </section>
+    </section>
+</main>
+
+<footer>
+    <div include-html="components/footer.html"></div>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const includes = document.querySelectorAll('[include-html]');
+        includes.forEach(el => {
+            fetch(el.getAttribute('include-html'))
+                .then(res => res.text())
+                .then(data => el.innerHTML = data);
+        });
+    });
+</script>
 </body>
 </html>

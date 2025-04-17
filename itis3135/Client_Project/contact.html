@@ -2,9 +2,73 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Vanguard Security Solutions</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/main.js" defer></script>
 </head>
 <body>
+<header>
+    <div include-html="components/header.html"></div>
+</header>
+
+<main>
+    <section id="contact">
+        <h1>Contact Vanguard Security Solutions</h1>
+        <p>Have questions or need a security consultation? We’re here to help. Use the form below or give us a call!</p>
+
+        <div class="contact-info">
+            <p><strong>Phone:</strong> (704) 555-1234</p>
+            <p><strong>Email:</strong> info@legionsecurity.com</p>
+            <p><strong>Address:</strong> 123 Main St, Belmont, NC 28012</p>
+        </div>
+
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+            <p id="formResponse" style="margin-top:10px;"></p>
+        </form>
+
+        <div class="map">
+            <iframe src="https://www.google.com/maps?q=Belmont,+NC&output=embed" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div include-html="components/footer.html"></div>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const includeElements = document.querySelectorAll('[include-html]');
+        includeElements.forEach(el => {
+            fetch(el.getAttribute("include-html"))
+                .then(res => res.text())
+                .then(data => {
+                    el.innerHTML = data;
+                });
+        });
+
+        // AJAX form handling
+        const form = document.getElementById("contactForm");
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const name = document.getElementById("name").value;
+            document.getElementById("formResponse").textContent = `Thank you, ${name}. We’ll be in touch soon!`;
+            form.reset();
+        });
+    });
+</script>
 
 </body>
 </html>

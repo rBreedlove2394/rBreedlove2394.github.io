@@ -2,9 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Vanguard Security Solutions</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/main.js" defer></script>
 </head>
 <body>
+<header>
+    <div include-html="components/header.html"></div>
+</header>
 
+<main>
+    <section id="about">
+        <h1>About Vanguard Security Solutions</h1>
+        <p>Founded in the heart of Belmont, NC, <strong>Vanguard Security Solutions</strong> has provided top-notch security services for over a decade. We are committed to safety, professionalism, and community trust.</p>
+
+        <h2>Our Mission</h2>
+        <p>Our mission is to deliver reliable, customized security services that protect what matters most to our clients — their homes, businesses, and loved ones.</p>
+
+        <h2>Our History</h2>
+        <p>What began as a small local operation has grown into a trusted regional provider of residential and commercial security services. From basic alarm systems to advanced access control and monitoring, we’ve stayed at the forefront of security innovation.</p>
+
+        <h2>Our Team</h2>
+        <p>Our strength lies in our people. Each team member is trained, licensed, and committed to upholding the highest standards of integrity and vigilance. From field agents to support staff, we operate with professionalism and purpose.</p>
+
+        <h2>Why Choose Us?</h2>
+        <ul>
+            <li>Locally owned and operated</li>
+            <li>Highly trained security professionals</li>
+            <li>Cutting-edge security technology</li>
+            <li>Personalized service and support</li>
+            <li>24/7 monitoring and rapid response</li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <div include-html="components/footer.html"></div>
+</footer>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const includeElements = document.querySelectorAll('[include-html]');
+        includeElements.forEach(el => {
+            fetch(el.getAttribute("include-html"))
+                .then(res => res.text())
+                .then(data => {
+                    el.innerHTML = data;
+                });
+        });
+    });
+</script>
 </body>
 </html>
