@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ryan B. Breedlove ⚔ ITIS - 3135 - Home</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <h1>Sign Up for Services</h1>
+
+        <form action="#" method="post">
+            <!-- Name -->
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Your full name" required size="30"><br><br>
+
+            <!-- Phone Number -->
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required size="20"><br><br>
+
+            <!-- Email Address -->
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required size="30"><br><br>
+
+            <!-- Checkbox Group -->
+            <fieldset>
+                <legend>Services Interested In:</legend>
+                <input type="checkbox" id="security" name="services" value="Security">
+                <label for="security">Security Guard</label><br>
+
+                <input type="checkbox" id="monitoring" name="services" value="Monitoring">
+                <label for="monitoring">24/7 Monitoring</label><br>
+
+                <input type="checkbox" id="patrol" name="services" value="Patrol">
+                <label for="patrol">Patrol Services</label>
+            </fieldset><br>
+
+            <!-- Radio Button Group -->
+            <fieldset>
+                <legend>Preferred Contact Method:</legend>
+                <input type="radio" id="contactPhone" name="contactMethod" value="Phone" required>
+                <label for="contactPhone">Phone</label><br>
+
+                <input type="radio" id="contactEmail" name="contactMethod" value="Email">
+                <label for="contactEmail">Email</label><br>
+
+                <input type="radio" id="contactText" name="contactMethod" value="Text">
+                <label for="contactText">Text Message</label>
+            </fieldset><br>
+
+            <!-- Dropdown (Select) -->
+            <label for="hear">How did you hear about us?</label><br>
+            <select id="hear" name="referral" required>
+                <option value="">--Select an option--</option>
+                <option value="website">Website</option>
+                <option value="friend">Friend</option>
+                <option value="ad">Online Advertisement</option>
+                <option value="event">Local Event</option>
+            </select><br><br>
+
+            <!-- Reset and Submit Buttons -->
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+
+        </form>
+    </main>
+
+    <footer>
+     <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>

@@ -143,3 +143,41 @@ tfoot th {
 form {
     padding: 1.5rem;
 }
+main {
+    max-width: 1200px; /* Page won't stretch too wide */
+    width: 90%; /* Flexible with screen size */
+    margin: 0 auto; /* Center main content horizontally */
+}
+
+/* Media Query for Tablets (768px and below) */
+@media (max-width: 768px) {
+    main {
+        max-width: 95%;
+        width: 95%;
+    }
+    section > p,
+    section > ul {
+         /* Reduce padding for better mobile view */
+    }
+
+}
+
+/* Media Query for Mobile Phones (480px and below) */
+@media (max-width: 480px) {
+    main {
+        max-width: 100%;
+        width: 100%;
+    }
+    section > p,
+    section > ul {
+
+    }
+
+}
+
+/* Optional: Media Query for extra-large desktops (1400px and up) */
+@media (min-width: 1400px) {
+    main {
+        max-width: 1400px;
+    }
+}
