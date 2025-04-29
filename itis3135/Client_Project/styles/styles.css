@@ -44,8 +44,6 @@ h1 {
     font-size: 2.5rem;
     text-align: center;
     color: #f2c94c;
-    margin: 20px 0;
-    padding: 0;
     border: none;
     background: none;
     box-shadow: none;
@@ -54,8 +52,6 @@ h1 {
 h2 {
     font-size: 2rem;
     color: #f2c94c;
-    margin: 20px 0;
-    padding: 0;
     border: none;
     background: none;
     box-shadow: none;
@@ -64,12 +60,14 @@ h2 {
 h3 {
     font-size: 1.5rem;
     color: #f2c94c;
-    margin: 20px 0;
-    padding: 0;
+    text-align: center;
     border: none;
     background: none;
-    box-shadow: none;;
+    box-shadow: none;
+    padding: 0; /* removes shifted padding */
+    margin: 20px 0; /* nice vertical spacing */
 }
+
 
 p, li {
     line-height: 1.8;
