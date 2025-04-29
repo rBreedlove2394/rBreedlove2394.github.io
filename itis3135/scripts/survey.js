@@ -1,28 +1,75 @@
+// survey.js
+
+// Function to add a new course field
 function addCourse() {
     const container = document.getElementById('coursesContainer');
 
-    // Create a div to hold the course input + delete button
-    const courseDiv = document.createElement('div');
-    courseDiv.className = 'course-entry';
-    courseDiv.style.marginTop = '10px';
+    const div = document.createElement('div');
+    div.className = 'course-item';
 
-    // Create the input
     const input = document.createElement('input');
     input.type = 'text';
     input.name = 'course';
     input.placeholder = 'Enter course name';
     input.required = true;
 
-    // Create the delete button
     const deleteBtn = document.createElement('button');
     deleteBtn.type = 'button';
     deleteBtn.textContent = 'Delete';
     deleteBtn.style.marginLeft = '10px';
-    deleteBtn.onclick = () => courseDiv.remove();
+    deleteBtn.onclick = () => container.removeChild(div);
 
-    // Add input and delete button to the div
-    courseDiv.appendChild(input);
-    courseDiv.appendChild(deleteBtn);
+    div.appendChild(input);
+    div.appendChild(deleteBtn);
+    container.appendChild(div);
+}
 
-    // Append the div to the container
-    container.appendChild(courseDiv);}
+// Handle form submission
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('introForm');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        if (!form.checkValidity()) {
+            alert('Please fill out all required fields.');
+            return;
+        }
+
+        // Collect form data
+        const name = document.getElementById('name').value;
+        const mascot = document.getElementById('mascot').value;
+        const imageCaption = document.getElementById('imageCaption').value;
+        const personalBackground = document.getElementById('personalBackground').value;
+        const professionalBackground = document.getElementById('professionalBackground').value;
+        const academicBackground = document.getElementById('academicBackground').value;
+        const webDevBackground = document.getElementById('webDevBackground').value;
+        const platform = document.getElementById('platform').value;
+        const funnyThing = document.getElementById('funnyThing').value;
+        const anythingElse = document.getElementById('anythingElse').value;
+        const courses = Array.from(document.querySelectorAll('input[name="course"]')).map(input => input.value);
+
+        // Replace form with output
+        const output = document.getElementById('output');
+        output.innerHTML = `
+      <section>
+        <h2>Welcome ${name}!</h2>
+        <h3>Mascot: ${mascot}</h3>
+        <p><strong>Personal Background:</strong> ${personalBackground}</p>
+        <p><strong>Professional Background:</strong> ${professionalBackground}</p>
+        <p><strong>Academic Background:</strong> ${academicBackground}</p>
+        <p><strong>Background in Web Development:</strong> ${webDevBackground}</p>
+        <p><strong>Primary Computer Platform:</strong> ${platform}</p>
+        <h3>Courses Currently Taking:</h3>
+        <ul>${courses.map(course => `<li>${course}</li>`).join('')}</ul>
+        <p><strong>Funny Thing:</strong> ${funnyThing}</p>
+        <p><strong>Anything Else:</strong> ${anythingElse}</p>
+        <p><strong>Image Caption:</strong> ${imageCaption}</p>
+      </section>
+      <br>
+      <button onclick="window.location.reload()">Reset and Start Over</button>
+    `;
+
+        form.style.display = 'none';
+    });
+});

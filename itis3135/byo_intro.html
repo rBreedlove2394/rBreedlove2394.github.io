@@ -17,10 +17,10 @@
         main {
             max-width: 800px;
             margin: 40px auto;
-            background-color: transparent;
+            background-color: #141d2b; /* dark blue-black */
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(242, 201, 76, 0.2); /* slight gold glow */
         }
         form label {
             display: block;
@@ -68,63 +68,70 @@
 <header>
     <div data-include="components/header.html"></div>
 </header>
+
 <main>
     <h2>Build Your Own Intro Page</h2>
     <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
 
     <form id="introForm">
-        <label>Name: <input type="text" id="name" required></label><br>
-        <label>Mascot: <input type="text" id="mascot" required></label><br>
-        <label>Image: <input type="file" id="image" accept="image/png, image/jpeg" required></label><br>
-        <label>Image Caption: <input type="text" id="imageCaption" required></label><br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
-        <label>Personal Background:<br>
-            <textarea id="personalBackground" required></textarea>
-        </label><br>
+        <label for="mascot">Mascot:</label>
+        <input type="text" id="mascot" name="mascot" required>
 
-        <label>Professional Background:<br>
-            <textarea id="professionalBackground" required></textarea>
-        </label><br>
+        <label for="image">Image:</label>
+        <input type="file" id="image" name="image" accept="image/png, image/jpeg" required>
 
-        <label>Academic Background:<br>
-            <textarea id="academicBackground" required></textarea>
-        </label><br>
+        <label for="imageCaption">Image Caption:</label>
+        <input type="text" id="imageCaption" name="imageCaption" required>
 
-        <label>Background in Web Development:<br>
-            <textarea id="webDevBackground" required></textarea>
-        </label><br>
+        <label for="personalBackground">Personal Background:</label>
+        <textarea id="personalBackground" name="personalBackground" required></textarea>
 
-        <label>Primary Computer Platform:<br>
-            <input type="text" id="platform" required>
-        </label><br>
+        <label for="professionalBackground">Professional Background:</label>
+        <textarea id="professionalBackground" name="professionalBackground" required></textarea>
+
+        <label for="academicBackground">Academic Background:</label>
+        <textarea id="academicBackground" name="academicBackground" required></textarea>
+
+        <label for="webDevBackground">Background in Web Development:</label>
+        <textarea id="webDevBackground" name="webDevBackground" required></textarea>
+
+        <label for="platform">Primary Computer Platform:</label>
+        <input type="text" id="platform" name="platform" required>
 
         <div id="coursesContainer">
             <label>Courses Currently Taking:</label><br>
             <button type="button" onclick="addCourse()">Add Course</button>
-        </div><br>
+        </div>
 
-        <label>Funny Thing?<br>
-            <textarea id="funnyThing"></textarea>
-        </label><br>
+        <label for="funnyThing">Funny Thing?</label>
+        <textarea id="funnyThing" name="funnyThing"></textarea>
 
-        <label>Anything Else?<br>
-            <textarea id="anythingElse"></textarea>
-        </label><br>
+        <label for="anythingElse">Anything Else?</label>
+        <textarea id="anythingElse" name="anythingElse"></textarea>
 
         <label>
-            <input type="checkbox" id="agree" required>
+            <input type="checkbox" id="agree" name="agree" required>
             I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.
-        </label><br><br>
+        </label>
 
-        <input type="submit" value="Submit">
-        <input type="reset" value="Reset">
+        <div style="margin-top: 20px;">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
     </form>
 
+    <div id="output"></div>
 
 </main>
+
 <footer>
     <div data-include="components/footer.html"></div>
 </footer>
+
 <script src="scripts/HTMLInclude.min.js"></script>
 </body>
 </html>
+
