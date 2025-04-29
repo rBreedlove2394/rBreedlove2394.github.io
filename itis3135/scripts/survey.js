@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Collect form data
         const name = document.getElementById('name').value;
         const mascot = document.getElementById('mascot').value;
+        const imageFile = document.getElementById('image').files[0];
         const imageCaption = document.getElementById('imageCaption').value;
         const personalBackground = document.getElementById('personalBackground').value;
         const professionalBackground = document.getElementById('professionalBackground').value;
@@ -47,29 +48,42 @@ document.addEventListener('DOMContentLoaded', () => {
         const platform = document.getElementById('platform').value;
         const funnyThing = document.getElementById('funnyThing').value;
         const anythingElse = document.getElementById('anythingElse').value;
-        const courses = Array.from(document.querySelectorAll('input[name="course"]')).map(input => input.value);
+        const courses = Array.from(document.querySelectorAll('input[name="course"]')).map((input) => input.value);
 
-        // Replace form with output
-        const output = document.getElementById('output');
-        output.innerHTML = `
-      <section>
-        <h2>Welcome ${name}!</h2>
-        <h3>Mascot: ${mascot}</h3>
-        <p><strong>Personal Background:</strong> ${personalBackground}</p>
-        <p><strong>Professional Background:</strong> ${professionalBackground}</p>
-        <p><strong>Academic Background:</strong> ${academicBackground}</p>
-        <p><strong>Background in Web Development:</strong> ${webDevBackground}</p>
-        <p><strong>Primary Computer Platform:</strong> ${platform}</p>
-        <h3>Courses Currently Taking:</h3>
-        <ul>${courses.map(course => `<li>${course}</li>`).join('')}</ul>
-        <p><strong>Funny Thing:</strong> ${funnyThing}</p>
-        <p><strong>Anything Else:</strong> ${anythingElse}</p>
-        <p><strong>Image Caption:</strong> ${imageCaption}</p>
-      </section>
-      <br>
-      <button onclick="window.location.reload()">Reset and Start Over</button>
-    `;
+        if (imageFile) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const imageUrl = e.target.result;
 
-        form.style.display = 'none';
+                const output = document.getElementById('output');
+                output.innerHTML = `
+          <section>
+            <h2>Welcome ${name}!</h2>
+            <h3>Mascot: ${mascot}</h3>
+            <img src="${imageUrl}" alt="${imageCaption}" style="max-width:300px; border-radius:8px;"><br>
+            <p><strong>${imageCaption}</strong></p>
+            <p><strong>Personal Background:</strong> ${personalBackground}</p>
+            <p><strong>Professional Background:</strong> ${professionalBackground}</p>
+            <p><strong>Academic Background:</strong> ${academicBackground}</p>
+            <p><strong>Background in Web Development:</strong> ${webDevBackground}</p>
+            <p><strong>Primary Computer Platform:</strong> ${platform}</p>
+            <h3>Courses Currently Taking:</h3>
+            <ul>${courses.map((course) => `<li>${course}</li>`).join('')}</ul>
+            <p><strong>Funny Thing:</strong> ${funnyThing}</p>
+            <p><strong>Anything Else:</strong> ${anythingElse}</p>
+            <br>
+            <button id="resetButton">Reset and Start Over</button>
+          </section>
+        `;
+
+                form.style.display = 'none';
+
+                // Add event listener to reset button
+                document.getElementById('resetButton').addEventListener('click', () => {
+                    window.location.reload();
+                });
+            };
+            reader.readAsDataURL(imageFile);
+        }
     });
 });
