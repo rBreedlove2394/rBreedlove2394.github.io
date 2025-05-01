@@ -1,5 +1,5 @@
 // slideshow.js
-$(document).ready(function () {
+function setupSlideshow() {
   $(".thumb").on("click", function () {
     const newSrc = $(this).attr("src");
     const newCaption = $(this).data("caption");
@@ -12,8 +12,11 @@ $(document).ready(function () {
       $(this).text(newCaption).fadeIn(200);
     });
   });
+}
 
-  // Load dynamic header/footer
-  $("#header").load("components/header.html");
-  $("#footer").load("components/footer.html");
+// Wait until includes finish loading
+document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("HTMLIncludeLoaded", function () {
+    setupSlideshow();
+  });
 });
