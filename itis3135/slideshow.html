@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow - Ryan Breedlove</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/slideshow.js" defer></script>
+</head>
+<body>
+<header>
+<<div data-include="components/header.html"></div>
+</header>
+<main>
+    <h2>Slideshow of My Name</h2>
+    <p class="tagline">A personalized image gallery based on the letters in my full name.</p>
+
+    <div class="slideshow-container">
+        <img id="mainImage" src="images/R.png" alt="R - for Rose">
+        <div class="caption">R - for Rose</div>
+    </div>
+
+    <div class="thumbnail-row">
+        <img class="thumb" src="images/R.png" data-caption="R - for Rose">
+        <img class="thumb" src="images/y.png" data-caption="Y - for Yo-yo">
+        <img class="thumb" src="images/a.png" data-caption="A - for Apple">
+        <img class="thumb" src="images/n.png" data-caption="N - for Notebook">
+        <img class="thumb" src="images/b.png" data-caption="B - for Bicycle">
+        <img class="thumb" src="images/r2.png" data-caption="R - for Rainbow">
+        <img class="thumb" src="images/e.png" data-caption="E - for Envelope">
+        <img class="thumb" src="images/e2.png" data-caption="E - for Eagle">
+        <img class="thumb" src="images/d.png" data-caption="D - for Drum">
+        <img class="thumb" src="images/l.png" data-caption="L - for Laptop">
+        <img class="thumb" src="images/o.png" data-caption="O - for Orange">
+        <img class="thumb" src="images/v.png" data-caption="V - for Violin">
+        <img class="thumb" src="images/e3.png" data-caption="E - for Earbuds">
+    </div>
+
+    <h3>AI Image Generation Prompts</h3>
+    <ul>
+        <li>Rose on a table in natural light, landscape format</li>
+        <li>Classic wooden yo-yo on white background, landscape photo</li>
+        <li>Red apple on a book with warm light, landscape</li>
+        <li>Notebook on a desk with pen, high contrast, landscape</li>
+        <li>Bicycle near a brick wall, natural setting, landscape</li>
+        <li>Rainbow over a field, vivid colors, landscape</li>
+        <li>Envelope sealed with wax, antique table background, landscape</li>
+        <li>Bald eagle in flight over a canyon, wide angle</li>
+        <li>Drum kit on stage with lights, landscape format</li>
+        <li>Laptop on a wooden desk, backlit screen, landscape</li>
+        <li>Orange on a cutting board, kitchen scene, landscape</li>
+        <li>Violin resting on a chair with warm light, landscape</li>
+        <li>White wireless earbuds on a dark cloth, landscape</li>
+    </ul>
+    <p><strong>Tool used:</strong> DALL·E 3 (ChatGPT)</p>
+</main>
+<footer>
+    <div data-include="components/footer.html"></div>
+</footer>
+<script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
